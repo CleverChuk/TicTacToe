@@ -284,6 +284,9 @@ public class Game extends AppCompatActivity {
     }
 
     private void restartPlayer() {
+        if(player == null)
+            startPlayer();
+
         if (player.isPlaying()) {
             player.stop();
             try {
